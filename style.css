@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #ffffff; 
+	--text-color: #bebebe;
+	--accent-color: #6b93be; 
+	--background-color: #032141; 
+	--secondary-background-color: #041c34; 
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+/* Common styles */
+img {
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+.description {
+	margin-top: 1rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 2.2rem;
+	text-transform: uppercase;
+}
+.item_preTitle {
+	font-size: 1.5rem;
+	color: var(--text-color);
+	font-weight: 300;
+}
+.item_title {
+	font-size: 1.8rem;
+	color: var(--primary-color);
+	font-weight: 500;
+	margin: 0.8rem 0;
+}
+.item_subtitle {
+	font-size: 1.5rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+/* Layouts */
+.container {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: var(--background-color);
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 3rem;
+	}
+}
+
+/* Profile Section */
+.profile {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.profile img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+.profile h1 {
+	font-size: 3rem;
+	margin: 0.5rem 0;
+	color: var(--primary-color);
+}
+
+.profile h2 {
+	font-size: 1.8rem;
+	color: var(--accent-color);
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.profile h4 {
+	font-size: 1.6rem;
+	color: var(--text-color);
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.profile p {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+.profile a {
+	color: var(--accent-color);
+	font-weight: 500;
+}
+
+/* Skills Section */
+.skills {
+	margin-top: 3rem;
+}
+
+.skills h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.skills p {
+	font-size: 1.6rem;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+/* Experience Section */
+.experience {
+	margin-top: 3rem;
+}
+
+.experience h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.experience div {
+	background-color: var(--secondary-background-color);
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+}
+
+.experience h4 {
+	font-size: 1.6rem;
+	color: var(--primary-color);
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+.experience p {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+/* Education Section */
+.education {
+	margin-top: 3rem;
+}
+
+.education h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.education div {
+	background-color: var(--secondary-background-color);
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+}
+
+.education h4 {
+	font-size: 1.6rem;
+	color: var(--primary-color);
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+.education p {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.form-container {
+	max-width: 800px;
+	width: 90%;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: var(--background-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	color: var(--primary-color);
+	margin-bottom: 2rem;
+	font-weight: 700;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+label {
+	font-size: 1.5rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+	color: white;
+	background: var(--secondary-background-color);
+}
+
+input[type="file"] {
+	padding: 0.5rem;
+	background: var(--secondary-background-color);
+	color: var(--text-color);
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+}
+
+textarea {
+	height: 100px;
+}
+
+button {
+	padding: 1rem 2rem;
+	background: var(--accent-color);
+	color: #032141;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+button:hover {
+	background: #d9d9d9;
+	color: #032141;
+}
+
+/* Resume Container Styles */
+#resumeContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #032141;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.profile h2 {
+    font-size: 20px;
+    color: #007bff;
+    margin: 5px 0;
+}
+
+.profile h4 {
+    font-size: 16px;
+    color: #faf5f5;
+    margin: 5px 0;
+}
+
+.profile p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.profile a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.skills-container,
+.experience-container,
+.education-container {
+    margin-bottom: 20px;
+}
+
+.skill-item,
+.experience-item,
+.education-item {
+    margin-bottom: 15px;
+}
+
+.skill-item label,
+.experience-item label,
+.education-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.skill-item input[type="range"] {
+    width: 100%;
+}
+
+.experience-item,
+.education-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #032141;
+}

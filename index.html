@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Resume Builder</h2>
+        <form id="resumeForm">
+            <h3>Profile Image</h3>
+            <label for="profileImage">Upload Profile Image:</label>
+            <input type="file" id="profileImage" name="profileImage" accept="image/*">
+            <img id="profileImagePreview" src="" alt="Profile Image Preview" style="display: none; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-top: 10px;">
+
+            <!-- Personal Information -->
+            <h3>Personal Information</h3>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Profile Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Social Links -->
+            <h3>Social Links</h3>
+            <label for="github">GitHub:</label>
+            <input type="text" id="github" name="github">
+            <label for="linkedin">LinkedIn:</label>
+            <input type="text" id="linkedin" name="linkedin">
+
+            <!-- Skills -->
+            <h3>Skills</h3>
+            <div id="skillsContainer">
+                <div class="skill-item">
+                    <label for="skill1">Skill 1:</label>
+                    <input type="text" id="skill1" name="skill1">
+                    <label for="proficiency1">Proficiency:</label>
+                    <input type="range" min="0" max="100" id="proficiency1" name="proficiency1">
+                </div>
+            </div>
+            <button type="button" id="addSkill">Add Another Skill</button>
+
+            <!-- Experience -->
+            <h3>Experience</h3>
+            <div id="experienceContainer">
+                <div class="experience-item">
+                    <label for="expTitle1">Job Title:</label>
+                    <input type="text" id="expTitle1" name="expTitle1">
+                    <label for="expCompany1">Company:</label>
+                    <input type="text" id="expCompany1" name="expCompany1">
+                    <label for="expStartDate1">Start Date:</label>
+                    <input type="date" id="expStartDate1" name="expStartDate1" required>
+                    <label for="expEndDate1">End Date:</label>
+                    <input type="date" id="expEndDate1" name="expEndDate1">
+                    <label for="expDescription1">Description:</label>
+                    <textarea id="expDescription1" name="expDescription1"></textarea>
+                </div>
+            </div>
+            <button type="button" id="addExperience">Add Another Experience</button>
+
+            <!-- Education -->
+            <h3>Education</h3>
+            <div id="educationContainer">
+                <div class="education-item">
+                    <label for="eduDegree1">Degree:</label>
+                    <input type="text" id="eduDegree1" name="eduDegree1">
+                    <label for="eduSchool1">School:</label>
+                    <input type="text" id="eduSchool1" name="eduSchool1">
+                    <label for="eduStartDate1">Start Date:</label>
+                    <input type="date" id="eduStartDate1" name="eduStartDate1" required>
+                    <label for="eduEndDate1">End Date:</label>
+                    <input type="date" id="eduEndDate1" name="eduEndDate1">
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add Another Education</button>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div class="container" id="resumeContainer" style="display: none;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
